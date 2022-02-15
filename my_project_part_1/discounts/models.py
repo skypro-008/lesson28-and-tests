@@ -14,14 +14,7 @@ class Discount(models.Model):
     CATEGORIES = [(PROMO, "Промокод"), (CAMPAIGN, "Акция"), (DISCOUNT, "Скидка")]
 
     category = models.CharField(max_length=8, choices=CATEGORIES, default=PROMO)
-    tour = models.ForeignKey(
-        Tour,
-        on_delete=models.CASCADE,
-    )
-    discount = models.PositiveSmallIntegerField(default=10)
-    code = models.CharField(max_length=20, default="skypro")
-    starts_at = models.DateTimeField(null=True)
-    ends_at = models.DateTimeField(null=True)
+    # TODO дополните модель данными в соответствии со спецификацией
 
 
 # TODO после внесения соответствующих изменений в модель
